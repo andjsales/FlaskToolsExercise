@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Answers {% endblock %}
+
+{% block heading %} Your Answers: {% endblock %}
+
+{% block content %}
+{% for response in responses %}
+<ul>
+    <li>{{response}}</li>
+</ul>
+{% endfor %}
+<br>
+<form action="/finish">
+    <button type="submit">Submit Survey</button>
+</form>
+{% endblock %}
